@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Hub - Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #F5E8C7;
+            background-image: url('background-placeholder.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(245, 232, 199, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: url("foodhub2.png") no-repeat center;
+            margin-bottom: 20px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .logo-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input {
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid #CED4DA;
+            border-radius: 5px;
+            outline: none;
+            width: 100%;
+        }
+
+        .login-btn {
+            padding: 12px;
+            font-size: 16px;
+            color: white;
+            background-color: #E63946;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .login-btn:hover {
+            background-color: #D62828;
+        }
+
+        .forgot-password {
+            font-size: 12px;
+            color: #6C757D;
+            text-align: right;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        .forgot-password a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .signup-link {
+            font-size: 14px;
+            color: #6C757D;
+            margin-top: 10px;
+        }
+
+        .signup-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .social-login {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-btn img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .fb { border: 1px solid #3B5998; }
+        .google { border: 1px solid #DB4437; }
+        .twitter { border: 1px solid #1DA1F2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+        </div>
+        <form id="loginForm">
+            <input type="email" placeholder="Enter your email address" required>
+            <input type="password" placeholder="Enter your password" required>
+            <div class="forgot-password"><a href="#">Forgot password?</a></div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <p class="signup-link">Don't have an account? <a href="Register.html">Sign up</a></p>
+        <div class="social-login">
+            <button class="social-btn fb"><img src="facebook-logo-png_seeklogo-157841.png" alt="Facebook"></button>
+            <button class="social-btn google"><img src="google-2015-logo-png_seeklogo-268116.png" alt="Google"></button>
+            <button class="social-btn twitter"><img src="twitter-x-logo-png_seeklogo-492396.png" alt="Twitter"></button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Redirect to home page after successful login
+        window.location.href = "home.html";
+        });
+    </script>
+</body>
+</html>

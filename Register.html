@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Hub - Welcome Onboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #EBE2AA;
+            background-image: url('background-placeholder.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(245, 232, 199, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #F4A261;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #343A40;
+            margin: 10px 0;
+        }
+
+        header p {
+            font-size: 16px;
+            color: #6C757D;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #CED4DA;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .register-btn {
+            padding: 12px;
+            font-size: 16px;
+            color: white;
+            background-color: #E63946;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .register-btn:hover {
+            background-color: #D62828;
+        }
+
+        .login-link {
+            font-size: 14px;
+            color: #6C757D;
+            margin-top: 10px;
+        }
+
+        .login-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .social-login {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-btn img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .fb { border: 1px solid #3B5998; }
+        .google { border: 1px solid #DB4437; }
+        .twitter { border: 1px solid #1DA1F2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="foodhub2.png" alt="Food Hub Logo" class="logo">
+            <h1>Welcome Onboard!</h1>
+            <p>let's help you meet your taste</p>
+        </header>
+        <form id="registrationForm">
+            <input type="text" placeholder="Enter your full name" required>
+            <input type="email" placeholder="Enter your email address" required>
+            <input type="password" placeholder="Enter your password" required>
+            <input type="password" placeholder="Confirm your password" required>
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+        <p class="login-link">Already have an account? <a href="login.html">sign in</a></p>
+        <div class="social-login">
+            <button class="social-btn fb"><img src="facebook-logo-png_seeklogo-157841.png" alt="Facebook"></button>
+            <button class="social-btn google"><img src="google-2015-logo-png_seeklogo-268116.png" alt="Google"></button>
+            <button class="social-btn twitter"><img src="twitter-x-logo-png_seeklogo-492396.png" alt="Twitter"></button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = document.querySelector('input[type="password"]').value;
+            const confirmPassword = document.querySelectorAll('input[type="password"]')[1].value;
+            
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+            alert("Registration successful! Redirecting to dashboard...");
+            // Here you would typically redirect or process the form data
+        });
+    </script>
+</body>
+</html>
