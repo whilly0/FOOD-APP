@@ -1,5 +1,7 @@
 Food Hub App
 Overview
+
+
 The Food Hub app is a mobile-first web application designed to help users discover and select food categories (e.g., Fast Food, Village Center, Local Dishes). This project is part of a Capstone Project, focusing on creating a user-friendly interface with responsive design. The app includes a login page and a category selection dashboard, with plans for further development.
 Features
 
